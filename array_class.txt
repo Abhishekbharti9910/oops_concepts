@@ -1,0 +1,46 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+class Employee{
+  int age;
+  char name[30];
+public:
+    void getdata(void);
+    void setdata(void);
+};
+
+void Employee :: setdata(void){
+    std::cout<<"Plz enter Name of the Employee : "<<std::endl;
+    std::cin>>name;
+    std::cout<<"Plz enter age of the Employee : "<<std::endl;
+    std::cin>>age;
+}
+
+void Employee :: getdata(void){
+    std::cout<<"Name of the Employee : "<<name<<std::endl;
+    std::cout<<"Age of the Employee : "<<age<<std::endl;
+}
+using namespace std;
+
+int main()
+{
+    std::cout<<"Hello World"<<std::endl;
+    Employee manager[2],worker[6],ceo[1];
+    manager[0].setdata();
+    manager[1].setdata();
+    worker[3].setdata();
+    ceo[0].setdata();
+    manager[0].getdata();
+    manager[1].getdata();
+    worker[3].getdata();
+    ceo[0].getdata();
+    
+    return 0;
+}

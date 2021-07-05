@@ -1,0 +1,43 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+class TEST{
+    int code;
+    static int count;
+public:
+    void setcode(void){
+        code = ++count;
+    }
+    void showcode(void){
+        std::cout<<"code : "<<code<<std::endl;
+    }
+    void static showcount(void){
+        std::cout<<"count : "<<count<<std::endl;
+    }
+};
+
+int TEST :: count;
+using namespace std;
+
+int main()
+{
+    cout<<"Hello World"<<std::endl;
+    
+    TEST t1,t2,t3;
+    t1.setcode();
+    t2.setcode();
+    t3.setcode();
+    TEST :: showcount();
+    t1.showcode();
+    t3.showcode();
+    t2.showcode();
+    
+
+    return 0;
+}
